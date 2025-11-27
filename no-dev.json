@@ -12,5 +12,6 @@
       "matchUpdateTypes": ["pin", "digest", "pinDigest"],
       "automerge": true
     }
-  ]
+  ],
+  "lockFileMaintenance": { "enabled": true }
 }
