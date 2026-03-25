@@ -5,26 +5,10 @@
     "helpers:pinGitHubActionDigestsToSemver",
     ":disableDependencyDashboard",
     "mergeConfidence:all-badges",
-    ":prHourlyLimitNone"
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": ["/^Dockerfile$/"],
-      "matchStrings": [
-        "ENV .*?_VERSION=\"(?<currentValue>.*?)\"\\s*#\\s*renovate:\\s*?deb\\s*?depName=(?<depName>.*?)\\s"
-      ],
-      "registryUrlTemplate": "https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64",
-      "datasourceTemplate": "deb"
-    },
-    {
-      "customType": "regex",
-      "managerFilePatterns": [".github/workflows/*"],
-      "matchStrings": [
-        "(?<depName>.*?)@(?<currentValue>.*?)\\s*?#\\s*?renovate:\\s*?rust-install\\s"
-      ],
-      "datasourceTemplate": "crate"
-    }
+    ":prHourlyLimitNone",
+    "customManagers:dockerfileVersions",
+    "customManagers:githubActionsVersions",
+    "customManagers:tsconfigNodeVersions"
   ],
   "packageRules": [
     {
@@ -34,6 +18,10 @@
     {
       "matchCategories": ["ci"],
       "automerge": true
+    },
+    {
+      "matchDatasources": ["deb"],
+      "registryUrls": ["https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64"]
     }
   ],
   "lockFileMaintenance": {
