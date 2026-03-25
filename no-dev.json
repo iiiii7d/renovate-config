@@ -20,7 +20,9 @@
     {
       "customType": "regex",
       "managerFilePatterns": [".github/workflows/*"],
-      "matchStrings": "(?<depName>.*?)@(?<currentValue>.*?)\\s*?#\\s*?renovate:\\s*?rust-install\\s",
+      "matchStrings": [
+        "(?<depName>.*?)@(?<currentValue>.*?)\\s*?#\\s*?renovate:\\s*?rust-install\\s"
+      ],
       "datasourceTemplate": "crate"
     }
   ],
