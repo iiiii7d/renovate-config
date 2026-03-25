@@ -12,7 +12,7 @@
       "customType": "regex",
       "managerFilePatterns": ["/^Dockerfile$/"],
       "matchStrings": [
-        "#\\s*renovate:\\s*?deb\\s*depName=(?<depName>.*?)?\\sENV .*?_VERSION=\"(?<currentValue>.*)\""
+        "ENV .*?_VERSION=\"(?<currentValue>.*?)\"\\s*#\\s*renovate:\\s*?deb\\s*?depName=(?<depName>.*?)\\s"
       ],
       "registryUrlTemplate": "https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64",
       "datasourceTemplate": "deb"
@@ -20,7 +20,7 @@
     {
       "customType": "regex",
       "managerFilePatterns": [".github/workflows/*"],
-      "matchStrings": "@(?<currentValue>.*?)\\s*#\\s*renovate:\\s*?rust-install\\s*depName=(?<depName>.*?)?",
+      "matchStrings": "(?<depName>.*?)@(?<currentValue>.*?)\\s*?#\\s*?renovate:\\s*?rust-install\\s",
       "datasourceTemplate": "crate"
     }
   ],
