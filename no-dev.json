@@ -7,6 +7,23 @@
     "mergeConfidence:all-badges",
     ":prHourlyLimitNone"
   ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/^Dockerfile$/"],
+      "matchStrings": [
+        "#\\s*renovate:\\s*?deb\\s*depName=(?<depName>.*?)?\\sENV .*?_VERSION=\"(?<currentValue>.*)\""
+      ],
+      "registryUrlTemplate": "https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64",
+      "datasourceTemplate": "deb"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [".github/workflows/*"],
+      "matchStrings": "@(?<currentValue>.*?)\\s*#\\s*renovate:\\s*?rust-install\\s*depName=(?<depName>.*?)?",
+      "datasourceTemplate": "crate"
+    }
+  ],
   "packageRules": [
     {
       "matchUpdateTypes": ["pin", "digest", "pinDigest"],
