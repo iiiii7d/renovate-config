@@ -22,8 +22,19 @@
     {
       "matchDatasources": ["deb"],
       "registryUrls": ["https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64"]
+    },
+    {
+      "matchDatasources": ["custom.rust.nightly"],
+      "schedule": ["before 4am on monday"],
+      "rangeStrategy": "pin"
     }
   ],
+  "customDatasources": {
+    "rust.nightly": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/rust-lang/rustup-components-history/refs/heads/gh-pages/{{packageName}}/rust.json",
+      "transformTemplates": ["{\"releases\": [$sift(function($v, $k) {$k != 'last_available' and $v}).$each(function($v, $k) { {\"version\": 'nightly-' & $k} })]}"]
+    }
+  },
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
