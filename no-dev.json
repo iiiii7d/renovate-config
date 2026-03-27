@@ -27,7 +27,12 @@
       "matchDatasources": ["custom.rust.nightly"],
       "schedule": ["before 4am on monday"],
       "rangeStrategy": "pin"
-    }
+    },
+    {
+      "matchDatasources": ["github-tags"],
+      "matchPackageNames": ["rust-lang/rust"],
+      "rangeStrategy": "pin"
+    },
   ],
   "customDatasources": {
     "rust.nightly": {
