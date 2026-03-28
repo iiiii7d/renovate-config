@@ -17,6 +17,7 @@
     },
     {
       "matchCategories": ["ci"],
+      "extends": ["schedule:daily"],
       "automerge": true
     },
     {
@@ -25,7 +26,8 @@
     },
     {
       "matchDatasources": ["custom.rust.nightly"],
-      "schedule": ["before 4am on monday"],
+      "extends": ["schedule:earlyMondays"],
+      "automergeType": "branch",
       "rangeStrategy": "pin"
     },
     {
@@ -43,5 +45,7 @@
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
-  }
+  },
+  "minimumReleaseAge": "3 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional"
 }
