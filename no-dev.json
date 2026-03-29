@@ -10,6 +10,8 @@
     "customManagers:githubActionsVersions",
     "customManagers:tsconfigNodeVersions"
   ],
+  "minimumReleaseAge": "3 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
   "packageRules": [
     {
       "matchUpdateTypes": ["pin", "digest", "pinDigest"],
@@ -19,6 +21,11 @@
       "matchCategories": ["ci"],
       "extends": ["schedule:daily"],
       "automerge": true
+    },
+    {
+      "matchCategories": ["ci"],
+      "matchDepNames": ["iiiii7d/cargo-msrv-workflow"],
+      "minimumReleaseAge": "0 days"
     },
     {
       "matchDatasources": ["deb"],
@@ -45,7 +52,5 @@
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
-  },
-  "minimumReleaseAge": "3 days",
-  "minimumReleaseAgeBehaviour": "timestamp-optional"
+  }
 }
