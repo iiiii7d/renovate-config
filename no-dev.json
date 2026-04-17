@@ -33,7 +33,7 @@
     },
     {
       "matchDatasources": ["custom.rust.nightly"],
-      "extends": ["schedule:earlyMondays"],
+      "schedule": "* 0-3 */2 * *",
       "automerge": true,
       "automergeType": "branch",
       "versioning": "rust-release-channel",
