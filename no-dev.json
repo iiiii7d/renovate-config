@@ -36,12 +36,14 @@
       "extends": ["schedule:earlyMondays"],
       "automerge": true,
       "automergeType": "branch",
-      "rangeStrategy": "pin"
+      "versioning": "rust-release-channel",
+      "rangeStrategy": "replace"
     },
     {
       "matchDatasources": ["github-tags"],
       "matchPackageNames": ["rust-lang/rust"],
-      "rangeStrategy": "pin"
+      "versioning": "rust-release-channel",
+      "rangeStrategy": "replace"
     },
   ],
   "customDatasources": {
