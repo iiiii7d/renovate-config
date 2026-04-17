@@ -44,7 +44,7 @@
       "matchPackageNames": ["rust-lang/rust"],
       "versioning": "rust-release-channel",
       "rangeStrategy": "replace"
-    },
+    }
   ],
   "customDatasources": {
     "rust.nightly": {
