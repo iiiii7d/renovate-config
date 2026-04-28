@@ -50,7 +50,7 @@
     "rust.nightly": {
       "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/rust-lang/rustup-components-history/refs/heads/gh-pages/{{packageName}}/rust.json",
       "transformTemplates": [
-        "{\"releases\": [$sift(function($v, $k) {$k != 'last_available' and $v}).$each(function($v, $k) { {\"version\": 'nightly-' & $k, \"releaseTimestamp\": $k & 'T00:00Z'} })]}"
+        "{'releases': [$sift(function($v, $k) {$k != 'last_available' and $v}).$each(function($v, $k) { {'version': 'nightly-' & $k, 'releaseTimestamp': $k & 'T00:00Z', 'isStable': true} })]}"
       ]
     }
   },
