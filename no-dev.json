@@ -33,6 +33,10 @@
     },
     {
       "matchDatasources": ["rust-version"],
+      "rangeStrategy": "replace"
+    },
+    {
+      "matchDatasources": ["rust-version"],
       "matchDepNames": ["rust-nightly"],
       "schedule": ["* 0-3 */5 * *"],
       "automerge": true,
