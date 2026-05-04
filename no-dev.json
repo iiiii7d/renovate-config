@@ -48,6 +48,10 @@
       "schedule": ["* 0-3 */5 * *"],
       "automerge": true,
       "automergeType": "branch"
+    },
+    {
+      "matchDepNames": ["pnpm"],
+      "followTag": "latest-11"
     }
   ],
   "lockFileMaintenance": {
