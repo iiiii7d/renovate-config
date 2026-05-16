@@ -29,7 +29,7 @@
     },
     {
       "matchDatasources": ["deb"],
-      "registryUrls": ["https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64"]
+      "registryUrls": ["{{#if registryUrl}}{{registryUrl}}{{else}}https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64{{/if}}"]
     },
     {
       "matchDatasources": ["rust-version"],
