@@ -49,7 +49,7 @@
     {
       "matchDatasources": ["rust-version"],
       "matchCurrentVersion": "/^nightly/",
-      "rangeStrategy": "replace
+      "rangeStrategy": "replace"
     },
     {
       "matchDepNames": ["pnpm"],
