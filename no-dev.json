@@ -32,7 +32,7 @@
       "registryUrls": ["{{#if registryUrl}}{{registryUrl}}{{else}}https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64{{/if}}"]
     },
     {
-      "matchDepNames": ["/\brust\b/", "/\bRUST\b/"],
+      "matchDepNames": ["/\\brust\\b/", "/\\bRUST\\b/"],
       "matchCurrentValue": "/^nightly/",
       "schedule": ["* 0-3 */5 * *"],
       "automerge": true,
