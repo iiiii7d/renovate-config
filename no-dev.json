@@ -33,7 +33,7 @@
     },
     {
       "matchDepNames": ["/\brust\b/", "/\bRUST\b/"],
-      "matchCurrentVersion": "/^nightly/",
+      "matchCurrentValue": "/^nightly/",
       "schedule": ["* 0-3 */5 * *"],
       "automerge": true,
       "automergeType": "branch"
@@ -41,14 +41,14 @@
     {
       "matchDatasources": ["github-tags"],
       "matchPackageNames": ["rust-lang/rust"],
-      "matchCurrentVersion": "/^nightly/",
+      "matchCurrentValue": "/^nightly/",
       "overrideDatasource": "rust-version",
       "versioning": "rust-release-channel",
       "rangeStrategy": "replace"
     },
     {
       "matchDatasources": ["rust-version"],
-      "matchCurrentVersion": "/^nightly/",
+      "matchCurrentValue": "/^nightly/",
       "rangeStrategy": "replace"
     },
     {
