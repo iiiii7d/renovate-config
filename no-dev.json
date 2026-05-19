@@ -29,7 +29,7 @@
     },
     {
       "matchDatasources": ["deb"],
-      "registryUrls": ["{{#if registryUrl}}{{registryUrl}}{{else}}https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64{{/if}}"]
+      "defaultRegistryUrls": ["https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64"]
     },
     {
       "matchDepNames": ["/\\brust\\b/", "/\\bRUST\\b/"],
