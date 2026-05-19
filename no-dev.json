@@ -29,25 +29,27 @@
     },
     {
       "matchDatasources": ["deb"],
-      "registryUrls": ["https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64"]
+      "defaultRegistryUrls": ["https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64"]
     },
     {
-      "matchDatasources": ["rust-version"],
+      "matchDepNames": ["/\\brust\\b/", "/\\bRUST\\b/"],
+      "matchCurrentValue": "/^nightly/",
+      "schedule": ["* 0-3 */5 * *"],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "matchDatasources": ["github-tags"],
+      "matchPackageNames": ["rust-lang/rust"],
+      "matchCurrentValue": "/^nightly/",
+      "overrideDatasource": "rust-version",
+      "versioning": "rust-release-channel",
       "rangeStrategy": "replace"
     },
     {
       "matchDatasources": ["rust-version"],
-      "matchDepNames": ["rust-nightly"],
-      "schedule": ["* 0-3 */5 * *"],
-      "automerge": true,
-      "automergeType": "branch"
-    }, 
-    {
-      "matchDatasources": ["docker"],
-      "matchDepNames": ["rustlang/rust"],
-      "schedule": ["* 0-3 */5 * *"],
-      "automerge": true,
-      "automergeType": "branch"
+      "matchCurrentValue": "/^nightly/",
+      "rangeStrategy": "replace"
     },
     {
       "matchDepNames": ["pnpm"],
