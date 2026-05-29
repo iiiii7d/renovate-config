@@ -8,7 +8,8 @@
     ":prHourlyLimitNone",
     "customManagers:dockerfileVersions",
     "customManagers:githubActionsVersions",
-    "customManagers:tsconfigNodeVersions"
+    "customManagers:tsconfigNodeVersions",
+    ":pinSkipCi"
   ],
   "minimumReleaseAge": "3 days",
   "minimumReleaseAgeBehaviour": "timestamp-optional",
