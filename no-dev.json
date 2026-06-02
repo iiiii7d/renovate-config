@@ -8,7 +8,8 @@
     ":prHourlyLimitNone",
     "customManagers:dockerfileVersions",
     "customManagers:githubActionsVersions",
-    "customManagers:tsconfigNodeVersions"
+    "customManagers:tsconfigNodeVersions",
+    ":pinSkipCi"
   ],
   "minimumReleaseAge": "3 days",
   "minimumReleaseAgeBehaviour": "timestamp-optional",
@@ -50,10 +51,6 @@
       "matchDatasources": ["rust-version"],
       "matchCurrentValue": "/^nightly/",
       "rangeStrategy": "replace"
-    },
-    {
-      "matchDepNames": ["pnpm"],
-      "followTag": "latest-11"
     }
   ],
   "lockFileMaintenance": {
