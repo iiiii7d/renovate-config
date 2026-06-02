@@ -51,10 +51,6 @@
       "matchDatasources": ["rust-version"],
       "matchCurrentValue": "/^nightly/",
       "rangeStrategy": "replace"
-    },
-    {
-      "matchDepNames": ["pnpm"],
-      "followTag": "latest-11"
     }
   ],
   "lockFileMaintenance": {
