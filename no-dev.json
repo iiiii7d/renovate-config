@@ -53,6 +53,20 @@
       "rangeStrategy": "replace"
     }
   ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/(^|/)(workflow-templates|\\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\\.ya?ml$/",
+        "/(^|/)action\\.ya?ml$/"
+      ],
+      "matchStrings": [
+        "uses: jdx/mise-action\\b(?:\\n|.)*?with:(?:\\n|.)*?version: (?<currentValue>.+?)\\n"
+      ],
+      "datasourceTemplate": "github-tags",
+      "packageNameTemplate": "jdx/mise"
+    }
+  ],
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
