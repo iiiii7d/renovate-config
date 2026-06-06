@@ -72,7 +72,7 @@
         "/(^|/)hk.pkl$/"
       ],
       "matchStrings": [
-        "(?:amends|import) \"package://github\\.com/jdx/hk/releases/download/v(?<currentVersion>.+?)/hk@\\1#/.*?\\.pkl\"",
+        "(?:amends|import) \"package://github\\.com/jdx/hk/releases/download/v(?<currentVersion>.+?)/hk@\\1#/.*?\\.pkl\""
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "jdx/hk"
