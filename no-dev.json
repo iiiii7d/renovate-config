@@ -69,11 +69,11 @@
     {
       "customType": "regex",
       "managerFilePatterns": [
-        "/(^|/)hk.pkl$/"
+        "/(^|/)hk\\.pkl$/"
       ],
       "matchStrings": [
-        "(?:amends|import) \"package://github\\.com/jdx/hk/releases/download/v(?<currentVersion>.+?)/hk@(.+?)#/.*?\\.pkl\"",
-        "(?:amends|import) \"package://github\\.com/jdx/hk/releases/download/v(.+?)/hk@(?<currentVersion>.+?)#/.*?\\.pkl\""
+        "(?:amends|import) \"package://github\\.com/jdx/hk/releases/download/v(?<currentValue>.+?)/hk@(.+?)#/.*?\\.pkl\"",
+        "(?:amends|import) \"package://github\\.com/jdx/hk/releases/download/v(.+?)/hk@(?<currentValue>.+?)#/.*?\\.pkl\""
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "jdx/hk"
