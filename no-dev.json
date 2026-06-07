@@ -35,7 +35,7 @@
     {
       "matchDepNames": ["/\\brust\\b/", "/\\bRUST\\b/"],
       "matchCurrentValue": "/^nightly/",
-      "schedule": ["* 0-3 */5 * *"],
+      "schedule": ["* 0-3 * * 1"],
       "automerge": true,
       "automergeType": "branch"
     },
@@ -51,6 +51,32 @@
       "matchDatasources": ["rust-version"],
       "matchCurrentValue": "/^nightly/",
       "rangeStrategy": "replace"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/(^|/)(workflow-templates|\\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\\.ya?ml$/",
+        "/(^|/)action\\.ya?ml$/"
+      ],
+      "matchStrings": [
+        "uses: jdx/mise-action\\b(?:\\n|.)*?with:(?:\\n|.)*?version: (?<currentValue>.+?)\\n"
+      ],
+      "datasourceTemplate": "github-tags",
+      "packageNameTemplate": "jdx/mise"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/(^|/)hk\\.pkl$/"
+      ],
+      "matchStrings": [
+        "(?:amends|import) \"package://github\\.com/jdx/hk/releases/download/v(?<currentValue>.+?)/hk@(.+?)#/.*?\\.pkl\"",
+        "(?:amends|import) \"package://github\\.com/jdx/hk/releases/download/v(.+?)/hk@(?<currentValue>.+?)#/.*?\\.pkl\""
+      ],
+      "datasourceTemplate": "github-tags",
+      "packageNameTemplate": "jdx/hk"
     }
   ],
   "lockFileMaintenance": {
