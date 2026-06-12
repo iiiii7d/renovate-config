@@ -81,7 +81,7 @@
     {
       "matchPackageNames": ["/\\bhk\\b/"],
       "groupName": "hk"
-    },
+    }
   ],
   "lockFileMaintenance": {
     "enabled": true,
