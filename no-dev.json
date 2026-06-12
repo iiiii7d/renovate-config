@@ -77,7 +77,11 @@
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "jdx/hk"
-    }
+    },
+    {
+      "matchPackageNames": ["/\\bhk\\b/"],
+      "groupName": "hk"
+    },
   ],
   "lockFileMaintenance": {
     "enabled": true,
