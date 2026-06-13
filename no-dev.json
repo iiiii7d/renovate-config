@@ -51,6 +51,10 @@
       "matchDatasources": ["rust-version"],
       "matchCurrentValue": "/^nightly/",
       "rangeStrategy": "replace"
+    },
+    {
+      "matchPackageNames": ["/\\bhk\\b/"],
+      "groupName": "hk"
     }
   ],
   "customManagers": [
@@ -77,10 +81,6 @@
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "jdx/hk"
-    },
-    {
-      "matchPackageNames": ["/\\bhk\\b/"],
-      "groupName": "hk"
     }
   ],
   "lockFileMaintenance": {
