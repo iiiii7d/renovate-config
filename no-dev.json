@@ -55,10 +55,6 @@
     {
       "matchPackageNames": ["/\\bhk\\b/"],
       "groupName": "hk"
-    },
-    {
-      "matchManagers": ["mise"],
-      "pinDigests": true
     }
   ],
   "customManagers": [
