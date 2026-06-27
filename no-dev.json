@@ -55,6 +55,10 @@
     {
       "matchPackageNames": ["/\\bhk\\b/"],
       "groupName": "hk"
+    },
+    {
+      "matchManagers": ["mise-en-place"],
+      "pinDigests": true
     }
   ],
   "customManagers": [
@@ -81,10 +85,6 @@
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "jdx/hk"
-    },
-    {
-      "matchManagers": ["mise-en-place"],
-      "pinDigests": true
     }
   ],
   "lockFileMaintenance": {
