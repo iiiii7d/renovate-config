@@ -81,6 +81,10 @@
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "jdx/hk"
+    },
+    {
+      "matchManagers": ["mise-en-place"],
+      "pinDigests": true
     }
   ],
   "lockFileMaintenance": {
