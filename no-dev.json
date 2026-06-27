@@ -57,7 +57,7 @@
       "groupName": "hk"
     },
     {
-      "matchManagers": ["mise-en-place"],
+      "matchManagers": ["mise"],
       "pinDigests": true
     }
   ],
