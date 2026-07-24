@@ -19,6 +19,11 @@
       "automerge": true
     },
     {
+      "matchUpdateTypes": ["pin"],
+      "matchManagers": ["mise"],
+      "enabled": false
+    },
+    {
       "matchCategories": ["ci"],
       "extends": ["schedule:daily"],
       "automerge": true
