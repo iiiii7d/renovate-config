@@ -11,7 +11,6 @@
     "customManagers:tsconfigNodeVersions",
     ":pinSkipCi"
   ],
-  "prHourlyLimit": 0,
   "minimumReleaseAge": "3 days",
   "minimumReleaseAgeBehaviour": "timestamp-optional",
   "packageRules": [
