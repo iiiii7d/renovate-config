@@ -66,7 +66,7 @@
     },
     {
       "matchPackageNames": ["/\\beslint\\b/"],
-      "matchManagers": ["pnpm"],
+      "matchManagers": ["npm"],
       "postUpgradeTasks": {
         "commands": ["pnpm up -p '@typescript-eslint/*'"],
         "workingDirTemplate": "{{{packageFileDir}}}",
