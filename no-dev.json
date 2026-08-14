@@ -77,7 +77,7 @@
       }
     },
     {
-      "matchPackageNames": ["pipx:hatch", "hatchling"],
+      "matchDepNames": ["pipx:hatch", "hatchling"],
       "groupName": "hatch-group"
     }
   ],
