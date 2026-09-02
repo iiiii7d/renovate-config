@@ -65,18 +65,6 @@
       "groupName": "eslint-group"
     },
     {
-      "matchPackageNames": ["/\\beslint\\b/"],
-      "matchManagers": ["npm"],
-      "postUpgradeTasks": {
-        "commands": ["pnpm up -p '@typescript-eslint/*'"],
-        "workingDirTemplate": "{{{packageFileDir}}}",
-        "fileFilters": ["**/pnpm-lock.yaml"],
-        "installTools": {
-          "pnpm": {}
-        }
-      }
-    },
-    {
       "matchDepNames": ["pipx:hatch", "hatchling"],
       "groupName": "hatch-group"
     }
