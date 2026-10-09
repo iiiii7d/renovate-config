@@ -67,7 +67,11 @@
     {
       "matchDepNames": ["pipx:hatch", "hatchling"],
       "groupName": "hatch-group"
-    }
+    },
+    {
+      "matchPackageNames": ["/\\bjdx\/mise\\b/"],
+      "schedule": ["* 0-3 * * 1"]
+    },
   ],
   "customManagers": [
     {
