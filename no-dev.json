@@ -35,8 +35,7 @@
     },
     {
       "matchDatasources": ["deb"],
-      "defaultRegistryUrls": ["https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64"],
-      "extractVersion": "^(?<version>[^+]+)",
+      "defaultRegistryUrls": ["https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free&binaryArch=amd64"]
     },
     {
       "matchDepNames": ["/\\brust\\b/", "/\\bRUST\\b/"],
